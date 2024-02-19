@@ -6,25 +6,29 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Character matiyo = new Character();
+        Character character = new Character();
         Monster goblin = new Monster();
-<<<<<<< Updated upstream
-        matiyo.name = "wow";
-        //matiyo.fightMonster(goblin);
-        System.out.println(matiyo.name);
-=======
         goblin.monsterName = "Goblin";
         character.playerName = "Matiyo";
+        //character.fightMonster(goblin);
         System.out.println(character.playerName);
->>>>>>> Stashed changes
         boolean playingStatus = true;
         Scanner scanner = new Scanner(System.in);
 
         while(playingStatus){
-            System.out.println("Type \"fight\" to battle monsters!\n " +
-                    "    \"quit\" to exit the game!");
+            System.out.println("Type \"fight\" to battle monsters! ");
             String userInput = scanner.nextLine().toLowerCase();
-            
+
+            switch (userInput){
+                case "fight":
+                    character.fightMonster(goblin);
+                    break;
+                case "quit":
+                    playingStatus = false;
+                default:
+                    System.out.println("Input not within the choices");
+
+            }
 
         }
     }

@@ -8,17 +8,18 @@ class Character {
     int attackPower = 1;
     int defencePower = 1;
     int goldCoins = 1;
-    String name = "";
+    String playerName = "";
 
     public void fightMonster(Monster monster){
+        System.out.println(playerName + " VS " + monster.monsterName);
         while (currentHealth > 0 && monster.currentHealth > 0){
-            System.out.println(monster.currentHealth);
             monster.currentHealth = monster.currentHealth - (attackPower - monster.defencePower);
             currentHealth = currentHealth - (monster.attackPower- defencePower);
             if (monster.currentHealth <= 0){
                 currentExp = currentExp + monster.rewardExp;
                 goldCoins = goldCoins + monster.rewardCoins;
-                System.out.println("Monster Dead!");
+                System.out.println("Monster Dead!\nYou earned " + monster.rewardExp + " Exp " +
+                        "and " + monster.rewardCoins + " Coin(s)!");
             } else if (currentHealth <= 0){
                 System.out.println("You Died!");
             }
