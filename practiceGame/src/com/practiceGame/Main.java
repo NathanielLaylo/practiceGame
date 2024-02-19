@@ -16,7 +16,8 @@ public class Main {
 
         while(playingStatus){
             System.out.println("Type \"fight\" to battle monsters!\n" +
-                    "     \"quit\" to exit the game!");
+                    "     \"quit\" to exit the game!\n" +
+                    "     \"inspect\" to check character info!");
             String userInput = scanner.nextLine().toLowerCase();
 
             switch (userInput){

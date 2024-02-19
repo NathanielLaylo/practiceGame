@@ -49,7 +49,7 @@ class Character {
                 "\n Your current exp: " + currentExp + "/" + MAX_EXP +
                 "\n Your current gold: " + goldCoins +
                 "\n Stats:: Attack Power: " + attackPower + " Defence Power: " + defencePower +
-                "\n Stat Points: " + statPoints);
+                "\n Stat Points: " + statPoints + "\n\n");
     }
 
     //fight monster take object as an argument
