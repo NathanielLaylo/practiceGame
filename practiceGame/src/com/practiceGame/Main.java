@@ -16,7 +16,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         while(playingStatus){
-            System.out.println("Type \"fight\" to battle monsters! ");
+            System.out.println("Type \"fight\" to battle monsters!\n" +
+                    "     \"quit\" to exit the game!");
             String userInput = scanner.nextLine().toLowerCase();
 
             switch (userInput){
