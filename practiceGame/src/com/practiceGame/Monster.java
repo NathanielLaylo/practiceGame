@@ -6,4 +6,5 @@ public class Monster {
     int attackPower = 1;
     int defencePower = 0;
     int rewardCoins = 1;
+    String monsterName = "";
 }
