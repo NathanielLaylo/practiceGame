@@ -18,6 +18,7 @@ class Character {
         System.out.println("Your current exp: " + currentExp + "/" + MAX_EXP);
         if(currentExp >= MAX_EXP){
             characterLevel++;
+            currentExp = 0;
             statPoints = statPoints + 2;
             System.out.println("You leveled UP!!");
         }
@@ -34,12 +35,16 @@ class Character {
         if (statPoints > 0){
             attackPower++;
             System.out.println("Current attack power: " + attackPower);
+        } else {
+            System.out.println("Stat points not enough\n");
         }
     }
     public void increaseDefence(){
         if (statPoints > 0){
             defencePower++;
             System.out.println("Current defence power: " + defencePower);
+        } else {
+            System.out.println("Stat points not enough\n");
         }
     }
 

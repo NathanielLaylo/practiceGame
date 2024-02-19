@@ -26,6 +26,23 @@ public class Main {
                     break;
                 case "inspect":
                     character.playerInfo();
+                    System.out.println("Do you want to allocate your stat points?");
+                    String inspectInput = scanner.nextLine().toLowerCase();
+                    if(inspectInput.equals("yes")){
+                        System.out.println("Type \"attack\" if you want to put stat points on your attack power" +
+                                "\nType \"defence\" if you want to put stat points on your defence power");
+                        String statChoice = scanner.nextLine().toLowerCase();
+                        switch (statChoice){
+                            case "attack":
+                                character.increaseAttack();
+                                break;
+                            case "defence":
+                                character.increaseDefence();
+                                break;
+                            default:
+                                System.out.println("Input not within the choices");
+                        }
+                    }
                     break;
                 case "quit":
                     playingStatus = false;
