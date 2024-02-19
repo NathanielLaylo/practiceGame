@@ -26,6 +26,7 @@ public class Main {
                     break;
                 case "quit":
                     playingStatus = false;
+                    break;
                 default:
                     System.out.println("Input not within the choices");
 
