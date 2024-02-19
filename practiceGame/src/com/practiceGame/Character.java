@@ -63,7 +63,7 @@ class Character {
                 earnExp(monster);
                 earnCoins(monster);
                 System.out.println("Monster Dead!\nYou earned " + monster.rewardExp + " Exp " +
-                        "and " + monster.rewardCoins + " Coin(s)!");
+                        "and " + monster.rewardCoins + " Coin(s)!\n\n");
             } else if (currentHealth <= 0){
                 System.out.println("You Died!");
             }
