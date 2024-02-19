@@ -10,7 +10,6 @@ public class Main {
         Monster goblin = new Monster();
         goblin.monsterName = "Goblin";
         character.playerName = "Matiyo";
-        //character.fightMonster(goblin);
         System.out.println(character.playerName);
         boolean playingStatus = true;
         Scanner scanner = new Scanner(System.in);
@@ -23,6 +22,9 @@ public class Main {
             switch (userInput){
                 case "fight":
                     character.fightMonster(goblin);
+                    break;
+                case "inspect":
+                    character.playerInfo();
                     break;
                 case "quit":
                     playingStatus = false;

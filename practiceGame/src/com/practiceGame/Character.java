@@ -43,6 +43,16 @@ class Character {
         }
     }
 
+    public void playerInfo(){
+        System.out.println(" Name: " + playerName +
+                "\n Level: " + characterLevel +
+                "\n Your current exp: " + currentExp + "/" + MAX_EXP +
+                "\n Your current gold: " + goldCoins +
+                "\n Stats:: Attack Power: " + attackPower + " Defence Power: " + defencePower +
+                "\n Stat Points: " + statPoints);
+    }
+
+    //fight monster take object as an argument
     public void fightMonster(Monster monster){
         int monsterHealth = monster.health;
         System.out.println(playerName + " VS " + monster.monsterName);
