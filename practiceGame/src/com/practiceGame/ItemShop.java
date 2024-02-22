@@ -32,8 +32,7 @@ public class ItemShop {
     }
     public static Item itemFinder(List<Item> itemShop, String itemName){
         for (Item item : itemShop){
-            System.out.println(itemName.equals(item.getItemName()));
-            if(itemName.equals(item.getItemName())){
+            if(itemName.equals(item.getItemName().toLowerCase())){
                 return item;
             }
         }
