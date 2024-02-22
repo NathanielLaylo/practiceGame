@@ -94,7 +94,7 @@ public class Main {
                             System.out.println("Input invalid");
                             break;
                     }
-
+                break;
                 //quit game
                 case "quit":
                     playingStatus = false;

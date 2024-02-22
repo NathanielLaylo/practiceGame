@@ -11,8 +11,8 @@ class Character {
     int goldCoins = 100;
     int statPoints = 0;
     String playerName;
-    Item weapon;
-    Item armor;
+    Item weapon = new Item("", 0, 0, 0);
+    Item armor = new Item("", 0, 0, 0);
 
     //earn exp by defeating monster
     public void earnExp(Monster monster){
@@ -80,10 +80,12 @@ class Character {
             System.out.println("Please Heal. Current health is too low to fight!");
         } else {
             int monsterHealth = monster.health;
+            int monsterAttack = Math.max(monster.attackPower - defencePower + armor.getDefencePower(), 0);
+            int playerAttack = Math.max(attackPower + weapon.getAttackPower() - monster.defencePower,0);
             System.out.println(playerName + " VS " + monster.monsterName);
             while (currentHealth > 0 && monsterHealth > 0) {
-                monsterHealth = monsterHealth - (attackPower - monster.defencePower);
-                currentHealth = currentHealth - (monster.attackPower - defencePower);
+                monsterHealth = monsterHealth - playerAttack;
+                currentHealth = currentHealth - monsterAttack;
                 if (currentHealth <= 0) {
                     System.out.println("You Died!");
                 } else if (monsterHealth <= 0) {
@@ -110,7 +112,9 @@ class Character {
 
     }
     public void equipArmor(Item armor){
-        if(goldCoins >= armor.getPrice()){
+        if(armor == null){
+            System.out.println("Input Invalid");
+        } else if(goldCoins >= armor.getPrice()){
             this.armor = armor;
             System.out.println("You bought and equipped the armor!");
         } else {
