@@ -13,4 +13,19 @@ public class Item {
         this.defencePower = defencePower;
         this.price = price;
     }
+
+    //getter
+    public String getItemName(){
+        return itemName;
+    }
+    public int getAttackPower(){
+        return attackPower;
+    }
+
+    public int getDefencePower() {
+        return defencePower;
+    }
+    public int getPrice(){
+        return price;
+    }
 }

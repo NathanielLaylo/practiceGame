@@ -16,5 +16,18 @@ public class ItemShop {
         armorShop.add(new Item("Iron Shield", 0, 2, 10));
         armorShop.add(new Item("Bronze Shield", 0, 3, 15));
     }
-    
+
+
+    public static void showShopItems(){
+        System.out.println("--Weapons--");
+        for (Item item : weaponShop){
+            System.out.println(item.getItemName() + ": Attack Power: " + item.getAttackPower() +
+                    " Defence Power: " + item.getDefencePower() + " Price: " + item.getPrice());
+        }
+        System.out.println("\n--Armors--");
+        for (Item item : armorShop){
+            System.out.println(item.getItemName() + ": Attack Power: " + item.getAttackPower() +
+                    " Defence Power: " + item.getDefencePower() + " Price: " + item.getPrice());
+        }
+    }
 }

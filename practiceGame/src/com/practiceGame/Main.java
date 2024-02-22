@@ -15,12 +15,16 @@ public class Main {
         //create monster list
         monsterManager.createMonster();
 
+        //create item list
+        ItemShop.createItem();
+
         //Game Loop Start
         while(playingStatus){
             System.out.println("\nType \"fight\" to battle monsters!\n" +
                     "     \"quit\" to exit the game!\n" +
                     "     \"inspect\" to check character info!\n" +
-                    "     \"heal\" to heal character!");
+                    "     \"heal\" to heal character!\n" +
+                    "     \"shop\" to check items and buy!");
             String userInput = scanner.nextLine().toLowerCase();
 
             //switch for player action
@@ -73,7 +77,8 @@ public class Main {
                         }
                     }
                     break;
-
+                case "shop":
+                    ItemShop.showShopItems();
                 //quit game
                 case "quit":
                     playingStatus = false;
