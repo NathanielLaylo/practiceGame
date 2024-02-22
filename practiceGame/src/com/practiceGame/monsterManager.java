@@ -10,7 +10,7 @@ public class monsterManager {
 
     //create multiple monster and add on designated Monster list
     public static void createMonster(){
-        area1_Monster.add(new Monster("Goblin", 50, 1, 0, 10, 2));
+        area1_Monster.add(new Monster("Goblin", 50, 2, 0, 10, 2));
         area1_Monster.add(new Monster("Slime", 20, 1, 0, 5, 1));
         area1_Monster.add(new Monster("Wolf", 80, 2, 0, 20, 5));
 
