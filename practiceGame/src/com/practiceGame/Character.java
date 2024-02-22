@@ -8,9 +8,11 @@ class Character {
     int currentExp = 0;
     int attackPower = 1;
     int defencePower = 1;
-    int goldCoins = 10;
+    int goldCoins = 100;
     int statPoints = 0;
-    String playerName = "";
+    String playerName;
+    Item weapon = new Item("", 0, 0, 0);
+    Item armor = new Item("", 0, 0, 0);
 
     //earn exp by defeating monster
     public void earnExp(Monster monster){
@@ -78,10 +80,12 @@ class Character {
             System.out.println("Please Heal. Current health is too low to fight!");
         } else {
             int monsterHealth = monster.health;
+            int monsterAttack = Math.max(monster.attackPower - defencePower + armor.getDefencePower(), 0);
+            int playerAttack = Math.max(attackPower + weapon.getAttackPower() - monster.defencePower,0);
             System.out.println(playerName + " VS " + monster.monsterName);
             while (currentHealth > 0 && monsterHealth > 0) {
-                monsterHealth = monsterHealth - (attackPower - monster.defencePower);
-                currentHealth = currentHealth - (monster.attackPower - defencePower);
+                monsterHealth = monsterHealth - playerAttack;
+                currentHealth = currentHealth - monsterAttack;
                 if (currentHealth <= 0) {
                     System.out.println("You Died!");
                 } else if (monsterHealth <= 0) {
@@ -94,4 +98,28 @@ class Character {
             }
         }
     }
+
+    //setter to equip bought item from the shop
+    public void equipWeapon(Item weapon){
+        if(weapon == null){
+            System.out.println("Input Invalid");
+        } else if(goldCoins >= weapon.getPrice()){
+            this.weapon = weapon;
+            System.out.println("You bought and equipped the weapon!");
+        } else {
+            System.out.println("You cannot buy the item because of insufficient gold coins!");
+        }
+
+    }
+    public void equipArmor(Item armor){
+        if(armor == null){
+            System.out.println("Input Invalid");
+        } else if(goldCoins >= armor.getPrice()){
+            this.armor = armor;
+            System.out.println("You bought and equipped the armor!");
+        } else {
+            System.out.println("You cannot buy the item because of insufficient gold coins!");
+        }
+    }
+
 }
