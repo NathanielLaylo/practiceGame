@@ -10,7 +10,9 @@ class Character {
     int defencePower = 1;
     int goldCoins = 10;
     int statPoints = 0;
-    String playerName = "";
+    String playerName;
+    Item weapon;
+    Item armor;
 
     //earn exp by defeating monster
     public void earnExp(Monster monster){
