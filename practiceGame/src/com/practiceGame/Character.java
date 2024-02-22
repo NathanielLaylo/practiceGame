@@ -81,13 +81,14 @@ class Character {
             while (currentHealth > 0 && monsterHealth > 0) {
                 monsterHealth = monsterHealth - (attackPower - monster.defencePower);
                 currentHealth = currentHealth - (monster.attackPower - defencePower);
-                if (monsterHealth <= 0) {
+                if (currentHealth <= 0) {
+                    System.out.println("You Died!");
+                } else if (monsterHealth <= 0) {
                     earnExp(monster);
                     earnCoins(monster);
                     System.out.println("Monster Dead!\nYou earned " + monster.rewardExp + " Exp " +
-                            "and " + monster.rewardCoins + " Coin(s)!\n\n");
-                } else if (currentHealth <= 0) {
-                    System.out.println("You Died!");
+                            "and " + monster.rewardCoins + " Coin(s)!\n" +
+                            "Remaining health: " + currentHealth + "/" + MAX_HEALTH);
                 }
             }
         }
