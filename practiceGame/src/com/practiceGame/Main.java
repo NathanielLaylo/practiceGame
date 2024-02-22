@@ -3,6 +3,8 @@ import com.practiceGame.Character;
 import com.practiceGame.Monster;
 import com.practiceGame.monsterManager;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -12,6 +14,9 @@ public class Main {
         System.out.println(character.playerName);
         boolean playingStatus = true;
         Scanner scanner = new Scanner(System.in);
+
+        //create monster list
+        monsterManager.createMonster();
 
         while(playingStatus){
             System.out.println("Type \"fight\" to battle monsters!\n" +
