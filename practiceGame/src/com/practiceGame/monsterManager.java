@@ -8,6 +8,7 @@ public class monsterManager {
     static List<Monster> area1_Monster = new ArrayList<>();
     static List<Monster> area2_Monster = new ArrayList<>();
 
+    //create multiple monster and add on designated Monster list
     public static void createMonster(){
         area1_Monster.add(new Monster("Goblin", 50, 1, 1, 10, 2));
         area1_Monster.add(new Monster("Slime", 20, 1, 0, 5, 1));
@@ -27,6 +28,7 @@ public class monsterManager {
         return area2_Monster;
     }
 
+    //generate random index and use on the list to return random monster
     public static <Monster> Monster getRandomMonster(List<Monster> list) {
         if (list == null || list.isEmpty()) {
             throw new IllegalArgumentException("List is empty or null");
@@ -38,6 +40,7 @@ public class monsterManager {
         return list.get(randomIndex);
     }
 
+    //return random monster using getRandomMonster and providing specific Monster list
     public static Monster getMonster(int currentArea){
         switch (currentArea){
             case 1:

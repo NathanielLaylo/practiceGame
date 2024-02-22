@@ -48,6 +48,7 @@ class Character {
         }
     }
 
+    //print player info
     public void playerInfo(){
         System.out.println(" Name: " + playerName +
                 "\n Level: " + characterLevel +

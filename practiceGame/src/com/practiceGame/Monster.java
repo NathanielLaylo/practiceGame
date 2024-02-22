@@ -8,6 +8,7 @@ public class Monster {
     int rewardCoins;
     String monsterName;
 
+    //constructor for the monster
     public Monster (String monsterName, int health, int attackPower, int defencePower, int rewardExp, int rewardCoins){
         this.monsterName = monsterName;
         this.health = health;

@@ -4,28 +4,33 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        //initialize character
         Character character = new Character();
         character.playerName = "Matiyo";
-        System.out.println(character.playerName);
+
+        //boolean for game loop
         boolean playingStatus = true;
         Scanner scanner = new Scanner(System.in);
 
         //create monster list
         monsterManager.createMonster();
 
+        //Game Loop Start
         while(playingStatus){
             System.out.println("Type \"fight\" to battle monsters!\n" +
                     "     \"quit\" to exit the game!\n" +
                     "     \"inspect\" to check character info!");
             String userInput = scanner.nextLine().toLowerCase();
 
+            //switch for player action
             switch (userInput){
+                //fighting case
                 case "fight":
-                   // character.fightMonster(goblin);
                     System.out.println("Which area do you want to hunt: 1 or 2?");
                     String userArea = scanner.nextLine().toLowerCase();
                     Monster randomMonster;
 
+                    //switch to allow player to choose which area to fight
                     switch (userArea){
                         case "1":
                             randomMonster = monsterManager.getMonster(1);
@@ -39,8 +44,9 @@ public class Main {
                             System.out.println("Input invalid");
                             break;
                     }
-
                     break;
+
+                //character inspection case
                 case "inspect":
                     character.playerInfo();
                     System.out.println("Do you want to allocate your stat points?");
@@ -61,6 +67,8 @@ public class Main {
                         }
                     }
                     break;
+
+                //quit game
                 case "quit":
                     playingStatus = false;
                     break;
