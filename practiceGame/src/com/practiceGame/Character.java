@@ -73,18 +73,22 @@ class Character {
 
     //fight monster take object as an argument
     public void fightMonster(Monster monster){
-        int monsterHealth = monster.health;
-        System.out.println(playerName + " VS " + monster.monsterName);
-        while (currentHealth > 0 && monsterHealth > 0){
-            monsterHealth = monsterHealth - (attackPower - monster.defencePower);
-            currentHealth = currentHealth - (monster.attackPower- defencePower);
-            if (monsterHealth <= 0){
-                earnExp(monster);
-                earnCoins(monster);
-                System.out.println("Monster Dead!\nYou earned " + monster.rewardExp + " Exp " +
-                        "and " + monster.rewardCoins + " Coin(s)!\n\n");
-            } else if (currentHealth <= 0){
-                System.out.println("You Died!");
+        if(currentHealth <= 0){
+            System.out.println("Please Heal. Current health is too low to fight!");
+        } else {
+            int monsterHealth = monster.health;
+            System.out.println(playerName + " VS " + monster.monsterName);
+            while (currentHealth > 0 && monsterHealth > 0) {
+                monsterHealth = monsterHealth - (attackPower - monster.defencePower);
+                currentHealth = currentHealth - (monster.attackPower - defencePower);
+                if (monsterHealth <= 0) {
+                    earnExp(monster);
+                    earnCoins(monster);
+                    System.out.println("Monster Dead!\nYou earned " + monster.rewardExp + " Exp " +
+                            "and " + monster.rewardCoins + " Coin(s)!\n\n");
+                } else if (currentHealth <= 0) {
+                    System.out.println("You Died!");
+                }
             }
         }
     }

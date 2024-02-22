@@ -17,7 +17,7 @@ public class Main {
 
         //Game Loop Start
         while(playingStatus){
-            System.out.println("Type \"fight\" to battle monsters!\n" +
+            System.out.println("\nType \"fight\" to battle monsters!\n" +
                     "     \"quit\" to exit the game!\n" +
                     "     \"inspect\" to check character info!\n" +
                     "     \"heal\" to heal character!");
