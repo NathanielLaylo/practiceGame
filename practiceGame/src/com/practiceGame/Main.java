@@ -79,6 +79,22 @@ public class Main {
                     break;
                 case "shop":
                     ItemShop.showShopItems();
+                    System.out.println("\nDo you want to buy \"weapon\" or \"armor\"?");
+                    String shopChoice = scanner.nextLine().toLowerCase();
+                    System.out.println("\nType the full name of the item you wish to buy: ");
+                    String itemChoice = scanner.nextLine().toLowerCase();
+                    switch (shopChoice){
+                        case "weapon":
+                            character.equipWeapon(ItemShop.getItem(itemChoice, shopChoice));
+                            break;
+                        case "armor":
+                            character.equipArmor(ItemShop.getItem(itemChoice, shopChoice));
+                            break;
+                        default:
+                            System.out.println("Input invalid");
+                            break;
+                    }
+
                 //quit game
                 case "quit":
                     playingStatus = false;

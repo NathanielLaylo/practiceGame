@@ -30,4 +30,26 @@ public class ItemShop {
                     " Defence Power: " + item.getDefencePower() + " Price: " + item.getPrice());
         }
     }
+    public static Item itemFinder(List<Item> itemShop, String itemName){
+        for (Item item : itemShop){
+            System.out.println(itemName.equals(item.getItemName()));
+            if(itemName.equals(item.getItemName())){
+                return item;
+            }
+        }
+        return null;
+    }
+
+    public static Item getItem(String itemChoice, String shopChoice){
+        switch (shopChoice){
+            case "weapon":
+                return itemFinder(weaponShop, itemChoice);
+            case "armor":
+                return itemFinder(armorShop, itemChoice);
+            default:
+                System.out.println("Input invalid");
+                break;
+        }
+        return null;
+    }
 }

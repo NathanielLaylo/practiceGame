@@ -8,7 +8,7 @@ class Character {
     int currentExp = 0;
     int attackPower = 1;
     int defencePower = 1;
-    int goldCoins = 10;
+    int goldCoins = 100;
     int statPoints = 0;
     String playerName;
     Item weapon;
@@ -96,4 +96,26 @@ class Character {
             }
         }
     }
+
+    //setter to equip bought item from the shop
+    public void equipWeapon(Item weapon){
+        if(weapon == null){
+            System.out.println("Input Invalid");
+        } else if(goldCoins >= weapon.getPrice()){
+            this.weapon = weapon;
+            System.out.println("You bought and equipped the weapon!");
+        } else {
+            System.out.println("You cannot buy the item because of insufficient gold coins!");
+        }
+
+    }
+    public void equipArmor(Item armor){
+        if(goldCoins >= armor.getPrice()){
+            this.armor = armor;
+            System.out.println("You bought and equipped the armor!");
+        } else {
+            System.out.println("You cannot buy the item because of insufficient gold coins!");
+        }
+    }
+
 }

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3612af28-5e94-410e-a9dc-96b3902e57a2" name="Changes" comment="" />
+    <list default="true" id="3612af28-5e94-410e-a9dc-96b3902e57a2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/practiceGame/com/practiceGame/Character.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/practiceGame/com/practiceGame/Character.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practiceGame/src/com/practiceGame/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/practiceGame/src/com/practiceGame/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practiceGame/src/com/practiceGame/ItemShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/practiceGame/src/com/practiceGame/ItemShop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practiceGame/src/com/practiceGame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/practiceGame/src/com/practiceGame/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
