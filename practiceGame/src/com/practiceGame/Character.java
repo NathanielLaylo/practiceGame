@@ -51,8 +51,9 @@ class Character {
     public void playerInfo(){
         System.out.println(" Name: " + playerName +
                 "\n Level: " + characterLevel +
-                "\n Your current exp: " + currentExp + "/" + MAX_EXP +
-                "\n Your current gold: " + goldCoins +
+                "\n Your current Exp: " + currentExp + "/" + MAX_EXP +
+                "\n Your current Gold: " + goldCoins +
+                "\n Your current Health: " + currentHealth + "/" + MAX_HEALTH +
                 "\n Stats:: Attack Power: " + attackPower + " Defence Power: " + defencePower +
                 "\n Stat Points: " + statPoints + "\n\n");
     }

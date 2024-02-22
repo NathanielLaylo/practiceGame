@@ -38,7 +38,7 @@ public class monsterManager {
         return list.get(randomIndex);
     }
 
-    public Monster monster(int currentArea){
+    public static Monster getMonster(int currentArea){
         switch (currentArea){
             case 1:
                 return (getRandomMonster(area1_Monster));
