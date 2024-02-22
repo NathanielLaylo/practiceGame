@@ -1,14 +1,13 @@
 package com.practiceGame;
 import com.practiceGame.Character;
 import com.practiceGame.Monster;
+import com.practiceGame.monsterManager;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Character character = new Character();
-        Monster goblin = new Monster();
-        goblin.monsterName = "Goblin";
         character.playerName = "Matiyo";
         System.out.println(character.playerName);
         boolean playingStatus = true;
