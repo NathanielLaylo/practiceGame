@@ -19,7 +19,8 @@ public class Main {
         while(playingStatus){
             System.out.println("Type \"fight\" to battle monsters!\n" +
                     "     \"quit\" to exit the game!\n" +
-                    "     \"inspect\" to check character info!");
+                    "     \"inspect\" to check character info!\n" +
+                    "     \"heal\" to heal character!");
             String userInput = scanner.nextLine().toLowerCase();
 
             //switch for player action
@@ -44,6 +45,11 @@ public class Main {
                             System.out.println("Input invalid");
                             break;
                     }
+                    break;
+
+                //heal character
+                case "heal":
+                    character.playerHeal();
                     break;
 
                 //character inspection case

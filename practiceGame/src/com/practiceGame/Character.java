@@ -8,7 +8,7 @@ class Character {
     int currentExp = 0;
     int attackPower = 1;
     int defencePower = 1;
-    int goldCoins = 1;
+    int goldCoins = 10;
     int statPoints = 0;
     String playerName = "";
 
@@ -57,6 +57,18 @@ class Character {
                 "\n Your current Health: " + currentHealth + "/" + MAX_HEALTH +
                 "\n Stats:: Attack Power: " + attackPower + " Defence Power: " + defencePower +
                 "\n Stat Points: " + statPoints + "\n\n");
+    }
+
+    //player heal
+    public void playerHeal(){
+        if (goldCoins >= 5){
+            goldCoins = goldCoins - 5;
+            currentHealth = MAX_HEALTH;
+            System.out.println("Character is now full health!\n");
+        }
+        else {
+            System.out.println("Not enough gold to heal");
+        }
     }
 
     //fight monster take object as an argument
