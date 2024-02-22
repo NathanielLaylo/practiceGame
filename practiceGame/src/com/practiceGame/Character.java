@@ -64,10 +64,11 @@ class Character {
         if (goldCoins >= 5){
             goldCoins = goldCoins - 5;
             currentHealth = MAX_HEALTH;
-            System.out.println("Character is now full health!\n");
+            System.out.println("Character is now full health!\n" +
+                    "Remaining gold coins : " + goldCoins);
         }
         else {
-            System.out.println("Not enough gold to heal");
+            System.out.println("Not enough gold to heal. 5 gold coins required to heal.");
         }
     }
 
